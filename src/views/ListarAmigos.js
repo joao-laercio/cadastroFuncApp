@@ -3,11 +3,11 @@ import { Text, StyleSheet, View, FlatList, Image, TouchableOpacity } from "react
 
 export default props => {
 
-    const [amigos, setAmigos] = useState([])
+    const [funcionarios, setFuncionarios] = useState([])
 
-    fetch('https://josmauricio.pythonanywhere.com/api/amigos/')
+    fetch('https://joaolaercio.pythonanywhere.com/api/funcionarios/')
         .then(data => data.json())
-        .then(json => setAmigos(json.results))
+        .then(json => setFuncionarios(json.results))
         .catch(error => console.warn(error))
 
     const ProductCard = ({ item }) => {
@@ -27,7 +27,7 @@ export default props => {
     return (
         <View style={styles.container}>
             <FlatList
-                data={amigos}
+                data={funcionarios}
                 style={styles.productList}
                 renderItem={ProductCard}
                 keyExtractor={(item) => item.id.toString()}

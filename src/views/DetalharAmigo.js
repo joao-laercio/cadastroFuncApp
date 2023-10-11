@@ -4,12 +4,12 @@ import { SocialIcon } from '@rneui/themed';
 
 export default props => {
 
-    const [amigo, setAmigo] = useState({})
+    const [funcionario, setFuncionario] = useState({})
     const { id } = props.route.params
 
-    fetch(`https://josmauricio.pythonanywhere.com/api/amigos/${id}`)
+    fetch(`https://joaolaercio.pythonanywhere.com/api/funcionarios/${id}`)
         .then(data => data.json())
-        .then(json => setAmigo(json))
+        .then(json => setFuncionario(json))
         .catch(error => console.warn(error))
 
 
@@ -18,7 +18,7 @@ export default props => {
             <View style={styles.avatarContainer}>
                 <Image
                     style={styles.avatar}
-                    source={{ uri: amigo.avatar }}
+                    source={{ uri: funcionario.avatar }}
                 />
             </View>
             <View style={styles.form}>
@@ -26,19 +26,19 @@ export default props => {
                 <TextInput
                     style={styles.input}
                     placeholder="Nome"
-                    value={amigo.nome}
+                    value={funcionario.nome}
                 />
                 <Text style={styles.label}>Email</Text>
                 <TextInput
                     style={styles.input}
                     placeholder="Enter Email"
-                    value={amigo.email}
+                    value={funcionario.email}
                 />
                 <Text style={styles.label}>Bio</Text>
                 <TextInput
                     style={styles.input}
                     placeholder="Enter Bio"
-                    value={amigo.info}
+                    value={funcionario.info}
                 />
             </View>
             <View style={styles.socialIcons}>
