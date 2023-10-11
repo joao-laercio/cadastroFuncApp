@@ -10,22 +10,33 @@ const Stack = createNativeStackNavigator()
 export default props => {
     return (
         <NavigationContainer>
-            <Stack.Navigator initialRouteName="ListarAmigos" >
-                <Stack.Screen name="ListarAmigos" component={ListarAmigos} />
-                <Stack.Screen name="DetalharAmigo" component={DetalharAmigo} />
+            <Stack.Navigator initialRouteName="ListarAmigos" screenOptions={screenOptions} >
+                <Stack.Screen name="ListarAmigos" component={ListarAmigos}
+                    options={() => {
+                        return {
+                            title: "Meus Amigos"
+                        }
+                    }}
+                />
+                <Stack.Screen name="DetalharAmigo" component={DetalharAmigo}
+                    options={() => {
+                        return {
+                            title: "Perfil do Amigo"
+                        }
+                    }}
+                />
             </Stack.Navigator>
         </NavigationContainer>
     )
 }
 
-const estilo = StyleSheet.create({
-    texto: {
-        fontSize: 36,
-        fontWeight: 'bold'
+const screenOptions = {
+    headerStyle: {
+        backgroundColor: '#0dcaf0'
     },
-    principal: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center'
+    headerTintColor: 'white',
+    headerTintStyle: {
+        fontWeight: 'bold'
     }
-})
+
+}
