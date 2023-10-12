@@ -53,7 +53,7 @@ export default props => {
                 <SocialIcon
                     type='whatsapp'
                     iconType='font-awesome'
-                    onPress={() => Linking.openURL(`https://wa.me/${amigo.whatsapp}`)}
+                    onPress={() => Linking.openURL(`https://wa.me/${funcionario.whatsapp}`)}
                 />
             </View>
 
