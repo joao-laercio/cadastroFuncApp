@@ -12,7 +12,7 @@ export default props => {
 
     const ProductCard = ({ item }) => {
         return (
-            <TouchableOpacity onPress={() => { props.navigation.navigate('DetalharAmigo', { id: item.id }) }}>
+            <TouchableOpacity onPress={() => { props.navigation.navigate('DetalharFuncionario', { id: item.id }) }}>
                 <View style={styles.productCard}>
                     <Image source={{ uri: item.avatar }} style={styles.productImage} />
                     <View style={styles.productInfo}>
