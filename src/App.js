@@ -2,26 +2,26 @@ import React from "react";
 import { Text, StyleSheet, View } from "react-native";
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import ListarAmigos from "./views/ListarAmigos";
-import DetalharAmigo from "./views/DetalharAmigo";
+import ListarFuncionario from "./views/DetalharFuncionario";
+import DetalharFuncionario from "./views/ListarFuncionario";
 
 const Stack = createNativeStackNavigator()
 
 export default props => {
     return (
         <NavigationContainer>
-            <Stack.Navigator initialRouteName="ListarAmigos" screenOptions={screenOptions} >
-                <Stack.Screen name="ListarAmigos" component={ListarAmigos}
+            <Stack.Navigator initialRouteName="ListarFuncionario" screenOptions={screenOptions} >
+                <Stack.Screen name="ListarFuncionario" component={ListarFuncionario}
                     options={() => {
                         return {
-                            title: "Meus Amigos"
+                            title: "Funcionario"
                         }
                     }}
                 />
-                <Stack.Screen name="DetalharAmigo" component={DetalharAmigo}
+                <Stack.Screen name="DetalharFuncionario" component={DetalharFuncionario}
                     options={() => {
                         return {
-                            title: "Perfil do Amigo"
+                            title: "Perfil do Funcionario"
                         }
                     }}
                 />
