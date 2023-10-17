@@ -16,27 +16,26 @@ export default props => {
     return (
         <View style={styles.container}>
             <View style={styles.avatarContainer}>
-                <Image
-                    style={styles.avatar}
-                    source={{ uri: funcionario.avatar }}
-                />
+            <Image style={styles.avatar}
+                   source={{uri: funcionario.avatar}}/>
+                
             </View>
             <View style={styles.form}>
                 <Text style={styles.label}>Name</Text>
                 <TextInput
-                    style={styles.input}
+                    
                     placeholder="Nome"
                     value={funcionario.nome}
                 />
                 <Text style={styles.label}>Email</Text>
                 <TextInput
-                    style={styles.input}
+                    
                     placeholder="Enter Email"
                     value={funcionario.email}
                 />
                 <Text style={styles.label}>Bio</Text>
                 <TextInput
-                    style={styles.input}
+                    
                     placeholder="Enter Bio"
                     value={funcionario.info}
                 />

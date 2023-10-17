@@ -14,7 +14,7 @@ export default props => {
                 <Stack.Screen name="ListarFuncionario" component={ListarFuncionario}
                     options={() => {
                         return {
-                            title: "Funcionario"
+                            title: "Lista de Funcionarios"
                         }
                     }}
                 />
@@ -32,7 +32,7 @@ export default props => {
 
 const screenOptions = {
     headerStyle: {
-        backgroundColor: '#0dcaf0'
+        backgroundColor: '#A23EEC'
     },
     headerTintColor: 'white',
     headerTintStyle: {
