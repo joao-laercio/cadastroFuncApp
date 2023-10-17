@@ -2,8 +2,8 @@ import React from "react";
 import { Text, StyleSheet, View } from "react-native";
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import ListarFuncionario from "./views/DetalharFuncionario";
-import DetalharFuncionario from "./views/ListarFuncionario";
+import ListarFuncionario from "./views/ListarFuncionario";
+import DetalharFuncionario from "./views/DetalharFuncionario";
 
 const Stack = createNativeStackNavigator()
 
