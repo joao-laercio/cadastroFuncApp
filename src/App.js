@@ -5,6 +5,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import ListarFuncionario from "./views/ListarFuncionario";
 import DetalharFuncionario from "./views/DetalharFuncionario";
 
+
 const Stack = createNativeStackNavigator()
 
 export default props => {
@@ -25,7 +26,7 @@ export default props => {
                         }
                     }}
                 />
-            </Stack.Navigator>
+                </Stack.Navigator>
         </NavigationContainer>
     )
 }
